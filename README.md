@@ -13,7 +13,6 @@ An automated way of setting up my workstation on macOS or Ubuntu after a reinsta
  * Slack
  * iTerm2
 #### [App development](macos/scripts/appdevel.sh) 
- <!-- * asdf -->
  * Flutter
  * VS Code
  * Android Studio
@@ -35,7 +34,9 @@ Power on your mac and hold the keys `Shift+alt+cmd+R`. You should see a rotating
 
 Once _Mojave_ is installed, open a terminal and run the following:
 
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
 which will install brew and a few other basic packages.
 
 Then, run 
@@ -49,24 +50,21 @@ bash setup/macos/install.sh
 
 VS Code extensions (todo: automate this):
 
-* Flutter
+* Flutter 
 
-Android Studio configuration:
+Android Studio configuration (Preferences->Plugins):
 
 * Flutter plugin
 * Dart plugin
 
-
-
-
-
-
-### References
-* Install flutter on MacOS using brew and asdf https://dev.to/0xdonut/how-to-install-flutter-on-macos-using-homebrew-and-asdf-3loa
-* Install asdf https://dev.to/0xdonut/manage-your-runtime-environments-using-asdf-and-not-nvm-or-rvm-etc-2c7c
-
+### Todo's
+* Automate:
+    * Launching apps like Logic Pro X and Android Studio after installation so that additional components can be installed. Android's SDK is actually installed when you first open Android Studio.
+    * plugin installation and emulator image download.
 
 ## Ubuntu
 ### List of applications & files
+
+
 
  
