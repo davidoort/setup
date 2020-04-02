@@ -2,7 +2,6 @@
 An automated way of setting up my workstation on macOS or Ubuntu after a reinstall of the OS
 
 ## MacOS
----
 ### List of applications & files:
 #### [Core](macos/scripts/install.sh)
  * Homebrew
@@ -36,7 +35,7 @@ Power on your mac and hold the keys `Shift+alt+cmd+R`. You see a rotating globe 
 
 Once _Mojave_ is installed, open a terminal and run the following:
 
-`curl ... `
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/davidoort/setup/master/macos/install.sh)"`
 
 VS Code extensions:
 
@@ -53,8 +52,6 @@ Android Studio configuration:
 
 
 ## Ubuntu
----
-
 ### List of applications & files
 
  
