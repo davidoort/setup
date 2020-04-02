@@ -11,8 +11,11 @@ brew cask install visual-studio-code
 # echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
 # echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
 
-# android sdk for command line util sdkmanager
-brew cask install android-sdk
+# # android sdk for command line util sdkmanager
+# brew cask install android-sdk
+
+# # Java dependency of the above
+# brew cask install homebrew/cask-versions/adoptopenjdk8
 
 # android studio to build flutter apps for android
 brew cask install android-studio
