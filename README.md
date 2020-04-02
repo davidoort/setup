@@ -31,7 +31,7 @@ An automated way of setting up my workstation on macOS or Ubuntu after a reinsta
 
 ### Instructions
 
-Power on your mac and hold the keys `Shift+alt+cmd+R`. You see a rotating globe and you'll have to wait for about 10 minutes. When a menu pops up, select reinstall MacOS. This will install MacOS _Mavericks_. Once you are logged in, open `Safari` and go to the following [link](https://support.apple.com/es-lamr/HT210190) to download _Mojave_.
+Power on your mac and hold the keys `Shift+alt+cmd+R`. You should see a rotating globe and you'll have to wait for about 10 minutes. When a menu pops up, select reinstall MacOS. This will install MacOS _Mavericks_. Once you are logged in, open `Safari` and go to the following [link](https://support.apple.com/es-lamr/HT210190) to download _Mojave_.
 
 Once _Mojave_ is installed, open a terminal and run the following:
 

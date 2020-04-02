@@ -12,16 +12,16 @@ brew cask install visual-studio-code
 # echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
 
 # android sdk for command line util sdkmanager
-brew install android-sdk
+brew cask install android-sdk
 
 # android studio to build flutter apps for android
-brew install android-studio
+brew cask install android-studio
 
 # intel haxm to help speed up flutter rendering
-brew install haxm
+brew cask install intel-haxm
 
 # adoptopenjdk8 prebuilt java binary to make sure the above android stuff works
-brew cask install adoptopenjdk8
+# brew cask install adoptopenjdk8
 
 # Install asdf plugins for dart, flutter and ruby
 # asdf plugin install dart https://github.com/patoconnor43/asdf-dart.git
