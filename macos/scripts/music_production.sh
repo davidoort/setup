@@ -3,8 +3,8 @@ set -e
 set -x
 
 # Wait for user to connect Backup Drive
-echo -e 'Press [Enter] after you have connected the backup drive with Logic Pro X'
-read -r foo
+read -p $'\e[32mPress [Enter] if you have connected your Backup Drive\e[0m' firstrun
+
 
 # Move Logic Pro X from Backup Drive
 

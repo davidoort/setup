@@ -3,7 +3,7 @@ set -e
 set -x
 
 # .bash_profile
-echo -e 'bash ~/.aliases' >> ~/.bash_profile
+echo -e 'source ~/.aliases' >> ~/.bash_profile
 
 # .aliases
 ## git status
