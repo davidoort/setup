@@ -11,16 +11,11 @@ brew cask install visual-studio-code
 # echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
 # echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
 
-<<<<<<< HEAD
 # # android sdk for command line util sdkmanager
 # brew cask install android-sdk
 
 # # Java dependency of the above
 # brew cask install homebrew/cask-versions/adoptopenjdk8
-=======
-# android sdk for command line util sdkmanager (this does not install the SDK)
-# brew cask install android-sdk
->>>>>>> e5b50eba540a3299348adf3386032d06cca05fc2
 
 # android studio to build flutter apps for android
 # TODO: launching this file and following the Setup Wizard will install the Android SDK
