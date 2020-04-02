@@ -42,7 +42,7 @@ Then, run
 ```
 brew install git
 cd 
-git clone git@github.com:davidoort/setup.git
+git clone https://github.com/davidoort/setup.git
 bash setup/macos/install.sh 
 ```
 
