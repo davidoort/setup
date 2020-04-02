@@ -6,9 +6,6 @@ set -x
 echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
 
 
-# Install git
-brew install git
-
 # Git config?
 
 echo "First, whats your full name (used for git commits)?"
@@ -27,11 +24,6 @@ echo "The sshkey is shown above"
 git config --global user.name "$name"
 git config --global user.email "$email"
 git config --global core.editor vim
-
-
-# Clone setup repository
-cd ~
-git clone git@github.com:davidoort/setup.git
 
 
 # Do a similar menu layout as in the autonomy install scripts
