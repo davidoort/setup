@@ -56,7 +56,11 @@ flutter doctor --android-licenses
 ## Install Xcode and the command line tools
 ## Install the command line tools only
 ## Cancel the install
+
+# Copy XCode from backup. In app store you are required to upgrade to Catalina
+cp /Volumes/BackupDrive/Backups.backupdb/David’s\ MacBook\ Pro/Latest/MacOS/Applications/Xcode ~/Applications/
 xcode-select --install
+# sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
 # sudo xcodebuild -runFirstLaunch
 
 # Accept xcode licenses

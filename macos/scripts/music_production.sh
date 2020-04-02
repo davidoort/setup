@@ -6,7 +6,8 @@ set -x
 read -p $'\e[32mPress [Enter] if you have connected your Backup Drive\e[0m' firstrun
 
 # Move Logic Pro X from Backup Drive
-
+cp /Volumes/BackupDrive/Backups.backupdb/David’s\ MacBook\ Pro/Latest/MacOS/Applications/Logic\ Pro\ X ~/Applications/
 
 
 # Launch Logic Pro X
+# TODO
