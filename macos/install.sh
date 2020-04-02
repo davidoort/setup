@@ -2,13 +2,9 @@
 set -e # Stop executing when a command returns a non-0 exit code
 set -x
 
-# Install homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+# Change path as recommended by brew doctor
 echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
 
-# Install brew cask
-brew install cask
-brew tap buo/cask-upgrade
 
 # Install git
 brew install git
