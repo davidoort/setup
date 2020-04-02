@@ -6,7 +6,7 @@ set -x
 echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
 
 
-# Git config?
+# Git config
 
 echo "First, whats your full name (used for git commits)?"
 read name
@@ -27,6 +27,9 @@ git config --global core.editor vim
 
 
 # Do a similar menu layout as in the autonomy install scripts
+
+# Install dialog
+brew install dialog
 
 # plot main menu with multi-choice
 cmd=(dialog --separate-output --checklist "What things do you want to install?" 22 76 16)
