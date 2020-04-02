@@ -47,9 +47,14 @@ bash setup/macos/install.sh
 ```
 
 
-VS Code extensions:
+VS Code extensions (todo: automate this):
+
+* Flutter
 
 Android Studio configuration:
+
+* Flutter plugin
+* Dart plugin
 
 
 
