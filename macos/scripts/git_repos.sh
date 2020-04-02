@@ -1,9 +1,6 @@
 #!/bin/bash
 set -e
 set -x
-# Installer: Clone github repositories which are frequently used 
-# Default: ON
-
 
 cd ~
 

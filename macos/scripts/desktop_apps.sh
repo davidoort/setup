@@ -1,8 +1,6 @@
 #!/bin/bash
 set -e
 set -x
-# Installer: Must-have desktop apps such as Chrome, Flux, Slack, Spotify
-# Default: ON
 
 # Chrome
 brew cask install google-chrome

@@ -2,14 +2,14 @@
 set -e
 set -x
 
-# Installer: Flutter, VS Code, Android Studio and XCode
-# Default: ON
-
 # VS Code
 brew cask install visual-studio-code
 
 # asdf for dart, flutter and ruby runtimes
 # brew install asdf
+# Update shell to handle asdf
+# echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
+# echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
 
 # android sdk for command line util sdkmanager
 brew install android-sdk

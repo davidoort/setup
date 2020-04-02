@@ -1,8 +1,6 @@
 #!/bin/bash
 set -e
 set -x
-# Installer: Will write custom configurations to bash_profile, aliases and inputrc
-# Default: ON
 
 # .bash_profile
 echo -e 'bash ~/.aliases' >> ~/.bash_profile
