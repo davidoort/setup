@@ -2,34 +2,37 @@
 set -e # Stop executing when a command returns a non-0 exit code
 set -x
 
-# Change path as recommended by brew doctor
-echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
+read -p $'\e[32mIs this your first time running the installation script? [y/n] \e[0m' firstrun
+
+if [$firstrun == 'y']; then
+    # Change path as recommended by brew doctor
+    echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
+
+    # Git config
+
+    echo "First, whats your full name (used for git commits)?"
+    read name
+    echo "It's nice to meet you $name, my name is super-awesome-script, what is your github email?"
+    read email
+
+    ssh-keygen -o -t rsa -b 4096 -C "$email"
+    echo
+    echo "https://github.com/settings/ssh"
+    read -p "Press [Enter] key when you have opened the above link..."
+    echo
+    cat ~/.ssh/id_rsa.pub
+    echo
+    echo "The sshkey is shown above"
+    git config --global user.name "$name"
+    git config --global user.email "$email"
+    git config --global core.editor vim
 
 
-# Git config
+    # Do a similar menu layout as in the autonomy install scripts
 
-echo "First, whats your full name (used for git commits)?"
-read name
-echo "It's nice to meet you $name, my name is super-awesome-script, what is your github email?"
-read email
-
-ssh-keygen -o -t rsa -b 4096 -C "$email"
-echo
-echo "https://github.com/settings/ssh"
-read -p "Press [Enter] key when you have opened the above link..."
-echo
-cat ~/.ssh/id_rsa.pub
-echo
-echo "The sshkey is shown above"
-git config --global user.name "$name"
-git config --global user.email "$email"
-git config --global core.editor vim
-
-
-# Do a similar menu layout as in the autonomy install scripts
-
-# Install dialog
-brew install dialog
+    # Install dialog
+    brew install dialog
+fi
 
 # plot main menu with multi-choice
 cmd=(dialog --separate-output --checklist "What things do you want to install?" 22 76 16)
