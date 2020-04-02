@@ -35,7 +35,17 @@ Power on your mac and hold the keys `Shift+alt+cmd+R`. You see a rotating globe 
 
 Once _Mojave_ is installed, open a terminal and run the following:
 
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/davidoort/setup/master/macos/install.sh)"`
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
+which will install brew and a few other basic packages.
+
+Then, run 
+```
+brew install git
+cd 
+git clone git@github.com:davidoort/setup.git
+bash setup/macos/install.sh 
+```
+
 
 VS Code extensions:
 
