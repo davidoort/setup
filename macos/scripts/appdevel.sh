@@ -41,13 +41,14 @@ brew cask install intel-haxm
 # Get the source code from the Flutter repo on GitHub, and change branches or tags as needed. 
 cd ~
 git clone https://github.com/flutter/flutter.git -b master
+export PATH="$PATH:`pwd`/flutter/bin"
 echo -e 'export PATH="$PATH:`pwd`/flutter/bin"' >> ~/.bash_profile
 
 # Install cocoapods and dependencies
 sudo gem install cocoapods
 pod setup
 
-# Accept android studio licenses 
+# Accept android studio licenses (this might also download Dart SDK)
 flutter doctor --android-licenses
 
 
