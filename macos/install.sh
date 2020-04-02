@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e # Stop executing when a command returns a non-0 exit code
-set -x
+set -x # For command execution visibility
 
 read -p $'\e[32mIs this your first time running the installation script? [y/n] \e[0m' firstrun
 
