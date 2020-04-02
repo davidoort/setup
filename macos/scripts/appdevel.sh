@@ -39,10 +39,18 @@ brew cask install intel-haxm
 # asdf global ruby 2.3.7 
 
 # Get the source code from the Flutter repo on GitHub, and change branches or tags as needed. 
-cd ~
-git clone https://github.com/flutter/flutter.git -b master
+{ # try
+    cd ~/flutter
+    git pull
+
+} || { # catch
+    cd ~
+    git clone https://github.com/flutter/flutter.git -b master
+    echo -e 'export PATH="$PATH:`pwd`/flutter/bin"' >> ~/.bash_profile
+}
+
 export PATH="$PATH:`pwd`/flutter/bin"
-echo -e 'export PATH="$PATH:`pwd`/flutter/bin"' >> ~/.bash_profile
+
 
 # Install cocoapods and dependencies
 sudo gem install cocoapods
