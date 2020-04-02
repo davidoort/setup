@@ -11,13 +11,19 @@ brew cask install visual-studio-code
 # echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
 # echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
 
+<<<<<<< HEAD
 # # android sdk for command line util sdkmanager
 # brew cask install android-sdk
 
 # # Java dependency of the above
 # brew cask install homebrew/cask-versions/adoptopenjdk8
+=======
+# android sdk for command line util sdkmanager (this does not install the SDK)
+# brew cask install android-sdk
+>>>>>>> e5b50eba540a3299348adf3386032d06cca05fc2
 
 # android studio to build flutter apps for android
+# TODO: launching this file and following the Setup Wizard will install the Android SDK
 brew cask install android-studio
 
 # intel haxm to help speed up flutter rendering
@@ -72,10 +78,9 @@ flutter doctor --android-licenses
 # Copy XCode from backup. In app store you are required to upgrade to Catalina
 # cp -Rv /Volumes/BackupDrive/Backups.backupdb/David’s\ MacBook\ Pro/Latest/MacOS/Applications/Xcode.app /Applications/
 sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+# This will automatically ask for licenses
 sudo xcodebuild -runFirstLaunch
 
-# Accept xcode licenses
-sudo xcodebuild -license
 
 # Check if everything is ready to write flutter apps!
 flutter doctor -v
