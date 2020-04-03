@@ -6,8 +6,7 @@ set -x
 echo -e 'source ~/.aliases' >> ~/.bash_profile
 
 # .aliases
-## git status
-echo -e 'alias gs="git status"' >> ~/.aliases
+cp ~/setup/macos/files/.aliases ~/.aliases
 
 
 # .inputrc
