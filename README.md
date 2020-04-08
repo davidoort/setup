@@ -47,7 +47,6 @@ git clone https://github.com/davidoort/setup.git
 bash setup/macos/install.sh 
 ```
 
-
 VS Code extensions (todo: automate this):
 
 * Flutter 
@@ -56,6 +55,13 @@ Android Studio configuration (Preferences->Plugins):
 
 * Flutter plugin
 * Dart plugin
+
+To launch the android emulator from terminal and to grant it internet connection, do the following:
+
+```
+emulator -list-avds
+emulator -avd NameOfYourDevice -dns-server 8.8.8.8
+```
 
 ### Todo's
 * Automate:
