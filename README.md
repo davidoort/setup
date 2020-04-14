@@ -67,6 +67,8 @@ emulator -avd NameOfYourDevice -dns-server 8.8.8.8
 * Automate:
     * Launching apps like Logic Pro X and Android Studio after installation so that additional components can be installed. Android's SDK is actually installed when you first open Android Studio.
     * plugin installation and emulator image download.
+    
+Download Garmin Desktop app and Adobe XD
 
 ## Ubuntu
 ### List of applications & files
