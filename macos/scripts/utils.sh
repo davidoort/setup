@@ -21,3 +21,6 @@ cat > ~/.inputrc << "EOF"
 "\e[C": forward-char
 "\e[D": backward-char
 EOF
+
+# htop
+brew install htop
