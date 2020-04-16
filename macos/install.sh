@@ -74,7 +74,7 @@ do
             ;;
 	      4)
             printf "\e[5m\n\nSetting up configuration files\n\n\e[25m"
-            bash ~/setup/macos/scripts/config_files.sh
+            bash ~/setup/macos/scripts/utils.sh
             printf "\n"
             read -p $'\e[32mThis one is done. If you are ready for the next, press [ENTER]\e[0m' foo
             printf "\n"
