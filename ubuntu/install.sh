@@ -26,14 +26,15 @@ if [ $firstrun = 'y' ]; then
     git config --global user.email "$email"
     git config --global core.editor vim
 
+    read -p "Press [Enter] key when you have added the key to Github..."
+
+
     # Git lfs
     sudo apt-get install git-lfs
     git lfs install
 
-
-
     # curl
-    sudo apt install curl
+    sudo apt install curl -y
 
 fi
 
