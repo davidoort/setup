@@ -72,7 +72,29 @@ Download Garmin Desktop app and Adobe XD
 
 ## Ubuntu
 ### List of applications & files
+#### [Core](macos/scripts/install.sh)
+ * Homebrew
+ * Homebrew cask
+#### [Desktop Apps](macos/scripts/destop_apps.sh)
+ * Chrome
+ * Spotify
+ * Slack
+ * Gitter
+ * Terminator
+#### [Development](macos/scripts/appdevel.sh) 
+ * ROS 
+ * VS Code
+#### [Git Repositories](macos/scripts/git_repos.sh)
+ * autonomy
+ * Unreal Engine
+ * FSDS
+#### [Config files](macos/scripts/utils.sh)
+ * .bashrc (add exports, link to aliases)
+ * .aliases
+ * inputrc
 
-
+ ### Todo's
+* Flutter stuff
+* Web dev stuff
 
  
