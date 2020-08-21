@@ -29,6 +29,9 @@ if [$firstrun == 'y']; then
     sudo apt-get install git-lfs
     git lfs install
 
+    # curl
+    sudo apt install curl
+
 fi
 
 # plot main menu with multi-choice
