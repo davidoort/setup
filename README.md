@@ -77,7 +77,7 @@ Download Garmin Desktop app and Adobe XD
  * Touchpad
  * Energy management
  * Brightness control
-#### [Desktop Apps](ubuntu/scripts/destop_apps.sh)
+#### [Desktop Apps](ubuntu/scripts/desktop_apps.sh)
  * Chrome
  * Spotify
  * Slack
