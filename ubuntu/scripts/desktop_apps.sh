@@ -2,6 +2,8 @@
 set -e
 set -x
 
+source utils/scriptutils.sh
+
 # Chrome
 if isInstalled "google-chrome-stable"; then
   echo "Skipping installation of google-chrome because it is already installed."
