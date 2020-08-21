@@ -65,3 +65,7 @@ else
     sudo DEBIAN_FRONTEND=noninteractive apt-get install -y spotify-client
   tmpExit
 fi
+
+# Gitter
+sudo apt install snapd
+sudo snap install gitter-desktop

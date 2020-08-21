@@ -25,11 +25,10 @@ if [$firstrun == 'y']; then
     git config --global user.email "$email"
     git config --global core.editor vim
 
+    # Git lfs
+    sudo apt-get install git-lfs
+    git lfs install
 
-    # Do a similar menu layout as in the autonomy install scripts
-
-    # Install dialog
-    brew install dialog
 fi
 
 # plot main menu with multi-choice
