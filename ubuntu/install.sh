@@ -4,6 +4,7 @@ set -x # For command execution visibility
 
 read -p $'\e[32mIs this your first time running the installation script? [y/n] \e[0m' firstrun
 
+echo $firstrun
 if [$firstrun == 'y']; then
 
     # Git config
@@ -28,6 +29,8 @@ if [$firstrun == 'y']; then
     # Git lfs
     sudo apt-get install git-lfs
     git lfs install
+
+
 
     # curl
     sudo apt install curl

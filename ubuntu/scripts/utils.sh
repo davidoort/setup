@@ -20,3 +20,6 @@ EOF
 
 # htop
 sudo apt install htop
+
+# vim
+sudo apt install vim
