@@ -9,6 +9,7 @@ echo -e 'source ~/.aliases' >> ~/.bashrc
 # export PATH="$PATH:`pwd`/flutter/bin/cache/dart-sdk/bin"
 # export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 # export PATH=$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/tools:$PATH
+
 # .aliases
 cp ~/setup/ubuntu/files/.aliases ~/.aliases
 
