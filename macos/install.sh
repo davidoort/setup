@@ -4,7 +4,7 @@ set -x # For command execution visibility
 
 read -p $'\e[32mIs this your first time running the installation script? [y/n] \e[0m' firstrun
 
-if [$firstrun == 'y']; then
+if [$firstrun = 'y']; then
     # Change path as recommended by brew doctor
     echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
 
