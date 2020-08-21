@@ -3,7 +3,7 @@ set -e
 set -x
 
 # Fix the touchpad - reboot will be required after this
-sudo apt-get install xserver-xorg-input-libinput
+sudo apt-get install -f xserver-xorg-input-libinput
 sudo apt-get remove --purge xserver-xorg-input-synaptics
 
 # Improve battery life - reboot will be required after this
