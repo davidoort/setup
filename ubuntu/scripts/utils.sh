@@ -22,4 +22,4 @@ EOF'
 sudo apt install htop
 
 # vim
-sudo apt install vim
+sudo apt install vim -y

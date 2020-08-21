@@ -59,10 +59,10 @@ echo "source ~/autonomy/devel/setup.bash || true" >> ~/.bashrc
 # Unreal Engine
 cd ~
 # We will be compiling all kinds of C++ files and it is important that they are all compiled using the same compiler version. Therefore we will install GCC 8 and set it to use it when gcc is called.
-sudo apt-get install gcc-8 g++-8
+sudo apt-get install gcc-8 g++-8 -y
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 700 --slave /usr/bin/g++ g++ /usr/bin/g++-7
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 800 --slave /usr/bin/g++ g++ /usr/bin/g++-8
-git clone --depth=1 -b 4.25 https://github.com/EpicGames/UnrealEngine.git
+git clone --depth=1 -b 4.25 git@github.com:EpicGames/UnrealEngine.git
 cd UnrealEngine
 ./Setup.sh && ./GenerateProjectFiles.sh && make
 
