@@ -130,6 +130,5 @@ To begin, open a terminal and run the following commands:
 ```
 sudo apt-get install git 
 git clone https://github.com/davidoort/setup.git
-cd setup/ubuntu
-sudo ./install.sh
+bash setup/ubuntu/install.sh
 ```

@@ -2,7 +2,7 @@
 set -e
 set -x
 
-source utils/scriptutils.sh
+source setup/ubuntu/utils/scriptutils.sh
 
 # Chrome
 if isInstalled "google-chrome-stable"; then
