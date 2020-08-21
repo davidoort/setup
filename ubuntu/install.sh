@@ -5,7 +5,7 @@ set -x # For command execution visibility
 read -p $'\e[32mIs this your first time running the installation script? [y/n] \e[0m' firstrun
 
 echo $firstrun
-if [$firstrun == 'y']; then
+if [ $firstrun = 'y' ]; then
 
     # Git config
 
