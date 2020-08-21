@@ -73,45 +73,54 @@ Download Garmin Desktop app and Adobe XD
 ## Ubuntu
  
 ### List of applications & files
-#### [Fixes](macos/scripts/fixes.sh)
+#### [Fixes](ubuntu/scripts/fixes.sh)
  * Touchpad
  * Energy management
  * Brightness control
-#### [Desktop Apps](macos/scripts/destop_apps.sh)
+#### [Desktop Apps](ubuntu/scripts/destop_apps.sh)
  * Chrome
  * Spotify
  * Slack
  * Gitter
  * Terminator
- * Screen recorder?
-#### [Development](macos/scripts/appdevel.sh) 
- * ROS 
  * VS Code
-#### [Git Repositories](macos/scripts/git_repos.sh)
- * autonomy
- * Unreal Engine
- * FSDS
-#### [Config files](macos/scripts/utils.sh)
+ * Screen recorder?
+#### [Robotics](ubuntu/scripts/robotics.sh)
+ * ROS
+ * OpenCV?
+ * Repos:
+    * autonomy
+    * Unreal Engine
+    * FSDS
+#### [Config files](ubuntu/scripts/utils.sh)
  * .bashrc (add exports, link to aliases)
  * .aliases
  * inputrc
 
- ### Todo's
-* Flutter stuff
-* Web dev stuff
+### Todo's
+#### [App Development?](ubuntu/scripts/appdevel.sh) 
+ * Flutter
+ * Android Studio and Emulator
+#### [Web Development?](ubuntu/scripts/webdevel.sh) 
+ * Nodejs
+ * ...
 
  
 ### Instructions (for Dell XPS)
 
 Reference tutorials:
-    * https://medium.com/@peterpang_84917/personal-experience-of-installing-ubuntu-18-04-lts-on-xps-15-9570-3e53b6cfeefe
-    * https://medium.com/@tylergwlum/my-journey-installing-ubuntu-18-04-on-the-dell-xps-15-7590-2019-756f738a6447
+* https://medium.com/@peterpang_84917/personal-experience-of-installing-ubuntu-18-04-lts-on-xps-15-9570-3e53b6cfeefe
+* https://medium.com/@tylergwlum/my-journey-installing-ubuntu-18-04-on-the-dell-xps-15-7590-2019-756f738a6447
 
 *Note: many of the steps in these tutorials were skipped*. Below I summarize the process by focusing on the crucial steps.
 
 **This tutorial assumes you already have a partition for Ubuntu and a bootable USB with an Ubuntu 18.04 image on it.** My computer was connected to the internet via an ethernet during the installation process.
 
-Insert this USB into your laptop and reboot. When you see the Dell logo, press F2 (or F10/F12) to enter BIOS. Secure boot should be disabled, SATA drives should be using AHCI and the boot order should start with the USB device. After leaving BIOS, you should go to GRUB. Without doing anything, after a few seconds you will boot into a test version of Ubuntu, where you can click on the desk icon "Install Ubuntu 18.04". Personally I used a normal installation (not sure if it is required vs the minimal installation). Installing 3rd party software such as Wifi drivers, etc is **highly recommended**. Once the installation completes, press restart, eject your USB and hold the power button to shutdown the computer. Next, switch on the laptop (you should be taken to GRUB) and boot with *Ubuntu*. Once you see the Ubuntu desktop, search for Ubuntu’s “Software & Updates”. All you need to do is to select “Using NVIDIA driver …” in the “Additional drivers” tab and press “Apply changes”. After **restarting**, you can test if the driver is installed correctly by typing `nvidia-smi` in the terminal after reboot. It should show you the GPU information. 
+Insert this USB into your laptop and reboot. When you see the Dell logo, press F2 (or F10/F12) to enter BIOS. Secure boot should be disabled, SATA drives should be using AHCI and the boot order should start with the USB device. After leaving BIOS, you should go to GRUB. Without doing anything, after a few seconds you will boot into a test version of Ubuntu, where you can click on the desk icon "Install Ubuntu 18.04". 
+
+Personally I used a normal installation (not sure if it is required vs the minimal installation). Installing 3rd party software such as Wifi drivers, etc is **highly recommended**. Once the installation completes, press restart, eject your USB and hold the power button to shutdown the computer. 
+
+Next, switch on the laptop (you should be taken to GRUB) and boot with *Ubuntu*. Once you see the Ubuntu desktop, search for Ubuntu’s “Software & Updates”. All you need to do is to select “Using NVIDIA driver …” in the “Additional drivers” tab and press “Apply changes”. After **restarting**, you can test if the driver is installed correctly by typing `nvidia-smi` in the terminal after reboot. It should show you the GPU information. 
 
 You should now be able to switch between the nvidia and intel graphics card by typing `sudo prime-select nvidia/intel` respectively, followed by a reboot.
 
