@@ -11,12 +11,12 @@ cp ~/setup/ubuntu/files/.aliases ~/.aliases
 
 # .inputrc
 # Incremental history searching
-sudo cat > /etc/inputrc << "EOF"
+sudo bash -c 'cat > /etc/inputrc << "EOF"
 "\e[A": history-search-backward
 "\e[B": history-search-forward
 "\e[C": forward-char
 "\e[D": backward-char
-EOF
+EOF'
 
 # htop
 sudo apt install htop
