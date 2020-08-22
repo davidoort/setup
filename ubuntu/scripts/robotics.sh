@@ -70,7 +70,8 @@ cd UnrealEngine
 git clone git@github.com:FS-Driverless/Formula-Student-Driverless-Simulator.git --recurse-submodules
 cd Formula-Student-Driverless-Simulator
 git lfs pull
-echo "source ~/Driverless-Competition-Simulator/ros/devel/setup.bash || true" >> ~/.bashrc
+./AirSim/setup.sh && ./AirSim/build.sh
+echo "source ~/Formula-Student-Driverless-Simulator/ros/devel/setup.bash || true" >> ~/.bashrc
  
 
 
