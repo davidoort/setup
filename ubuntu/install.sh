@@ -35,6 +35,9 @@ if [ $firstrun = 'y' ]; then
 
     # curl
     sudo apt install curl -y
+    
+    # basic build tools
+    sudo apt install build-essential
 
 fi
 
