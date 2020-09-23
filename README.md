@@ -84,6 +84,7 @@ Download Garmin Desktop app and Adobe XD
  * Gitter
  * Terminator
  * VS Code
+ * *Zoom*
  * [Screen recorder](https://www.ubuntupit.com/15-best-linux-screen-recorder-and-how-to-install-those-on-ubuntu/)
 #### [Robotics](ubuntu/scripts/robotics.sh)
  * ROS
