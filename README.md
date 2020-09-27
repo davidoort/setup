@@ -133,3 +133,10 @@ sudo apt-get install git
 git clone https://github.com/davidoort/setup.git
 bash setup/ubuntu/install.sh
 ```
+
+TODO: add instructions on how to do the dual boot for ubuntu 20 (with the approach of allocating 20GB of memory to /, 2xRAM to swap partition and the rest to /home/)
+add this to fixes:
+In the file /etc/xdg/autostart/org.gnome.Evolution-alarm-notify.desktop I changed the line
+OnlyShowIn=GNOME;Unity;XFCE;Dawati;MATE;
+to
+NotShowIn=GNOME;
