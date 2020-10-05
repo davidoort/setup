@@ -44,7 +44,8 @@ cmd=(whiptail --separate-output --checklist "What things do you want to install?
 options=(1 "Ubuntu Fixes" off
          2 "Desktop Apps" off
 	       3 "Robotics" off
-         4 "Utils" off)
+         4 "Utils" off
+         5 "Masters" off)
 
 choices=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
 clear
@@ -82,6 +83,14 @@ do
             read -p $'\e[32mThis one is done. If you are ready for the next, press [ENTER]\e[0m' foo
             printf "\n"
             ;;
+        5)
+            printf "\e[5m\n\nSetting up things for Master's work\n\n\e[25m"
+            bash ~/setup/ubuntu/scripts/masters.sh
+            printf "\n"
+            read -p $'\e[32mThis one is done. If you are ready for the next, press [ENTER]\e[0m' foo
+            printf "\n"
+            ;;
+
 
             
         
