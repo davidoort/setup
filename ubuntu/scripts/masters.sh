@@ -27,7 +27,7 @@ git clone git@github.com:davidoort/PAI2020.git
 cd ~
 git clone git@gitlab.inf.ethz.ch:scuri/pai_notebooks.git
 
-#### Install anaconda
+#### Install anaconda. VSCode can handle notebooks pretty well, so this might not even be necessary
 wget -P /tmp https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
 sha256sum /tmp/Anaconda3-2020.02-Linux-x86_64.sh
 bash /tmp/Anaconda3-2020.02-Linux-x86_64.sh
