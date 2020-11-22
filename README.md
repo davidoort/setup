@@ -93,6 +93,8 @@ Download Garmin Desktop app and Adobe XD
     * autonomy
     * Unreal Engine
     * FSDS
+ * MATLAB: Follow https://linuxconfig.org/how-to-install-matlab-on-ubuntu-20-04-focal-fossa-linux. If you have issues with plots, run this in the MATLAB command window `opengl('save','software')`. [Here](https://stackoverflow.com/questions/35730436/how-to-remap-the-copy-paste-keyboard-shortcuts-in-matlab-on-ubuntu#:~:text=Go%20to%20Preferences%20%2D%3E%20Keyboard.,and%20Ctrl%2DV%2C%20respectively.) is how to change copy-paste shortcuts from Emacs default to Windows.
+ 
 #### [Config files](ubuntu/scripts/utils.sh)
  * .bashrc (add exports, link to aliases)
  * .aliases
