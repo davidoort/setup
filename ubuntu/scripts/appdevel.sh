@@ -2,56 +2,45 @@
 # set -e
 # set -x
 
-# # VS Code
-# brew cask install visual-studio-code
+# Get the source code from the Flutter repo on GitHub, and change branches or tags as needed. 
+{ # try
+    cd ~/flutter
+    git pull
 
-# # Get the source code from the Flutter repo on GitHub, and change branches or tags as needed. 
-# { # try
-#     cd ~/flutter
-#     git pull
+} || { # catch
+    cd ~
+    git clone https://github.com/flutter/flutter.git -b master
+    echo -e 'export PATH="$PATH:`pwd`/flutter/bin"' >> ~/.bashrc
+}
 
-# } || { # catch
-#     cd ~
-#     git clone https://github.com/flutter/flutter.git -b master
-#     echo -e 'export PATH="$PATH:`pwd`/flutter/bin"' >> ~/.bash_profile
-# }
+export PATH="$PATH:`pwd`/flutter/bin"
 
-# export PATH="$PATH:`pwd`/flutter/bin"
+sudo apt install openjdk-11-jdk
+echo -e 'export JAVA_HOME=/usr/lib/jvm/java-14-openjdk-amd64/' >> ~/.bashrc
 
-# # android studio to build flutter apps for android
-# brew cask install android-studio
+sudo snap install android-studio --classic
+echo -e 'export PATH="$PATH:/snap/android-studio/"' >> ~/.bashrc
+# Launch android studio so that user can go through setup wizard
+# android-studio 
+# This should just wait for input from user
+read -p $'\e[32m Please open another terminal, run android-studio, go through the standard installation. Then open AS again and go to Tools>SDK Manager>Appearance and Behaviour> System Settings> Android SDK > SDK Tools. Check Android SDK Command-line tools and click ‘apply’ to install. Then press [ENTER] here  [ENTER]\e[0m' foo
+printf "\n"
 
-# # launching this app and following the Setup Wizard will install the Android SDK
-# open /Applications/Android\ Studio.app/
+# STEP 3 — Install Android SDK Command-Line Tools
+# We need this add “Android SDK Command-line Tools” to run successfully certain commands needed for flutter otherwise you will meet lot of weird errors.
+# In Android Studio
+# Open Tools > SDK Manager
+# From the left choose, Appearance & Behavior > System Settings > Android SDK
+# Select SDK Tools from the top menu
+# Check Android SDK Command-line tools and click ‘apply’ to install.
+# STEP 4 — Install Flutter and Dart plugin in Android Studio
+# If you want to use Android Studio as you Flutter IDE, then it’s good to install Flutter and Dart plugins.
+# File -> Settings
+# Plugins, type “Flutter” to search the plug-in.
+# Click “Install”
+# Flutter and Dart (you should be asked) plugins will be installed. IDE restart is needed after that.
 
-# read -p $'\e[32mFollow the Setup Wizard in Android Studio (check with flutter doctor that android sdk is found) and press [ENTER]\e[0m' foo
+flutter config — android-studio-dir=/snap/android-studio
+flutter doctor --android-licenses
 
-# # Accept android studio licenses (this might also download Dart SDK)
-# flutter doctor --android-licenses
-
-# # intel haxm to help speed up flutter rendering
-# brew cask install intel-haxm
-
-# # Install cocoapods and dependencies
-# sudo gem install cocoapods
-# pod setup
-
-
-# # Copy XCode from backup. In app store you are required to upgrade to Catalina
-# open https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_11.2.1/Xcode_11.2.1.xip
-
-# read -p $'\e[32mWait for the download of the updated Xcode xip, unzip it, move xcode into /Applications and press [ENTER]\e[0m' foo
-
-# sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
-# # This will automatically ask for licenses
-# sudo xcodebuild -runFirstLaunch
-
-
-# # Check if everything is ready to write flutter apps!
-# flutter doctor -v
-
-# export PATH="/usr/local/bin:$PATH"
-# export PATH="$PATH:`pwd`/flutter/bin"
-# export PATH="$PATH:`pwd`/flutter/bin/cache/dart-sdk/bin"
-# export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
-# export PATH=$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/tools:$PATH
+flutter doctor -v

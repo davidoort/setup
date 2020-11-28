@@ -94,6 +94,14 @@ do
             printf "\n"
             ;;
 
+        6)
+            printf "\e[5m\n\nApp development with Flutter \n\n\e[25m"
+            bash ~/setup/ubuntu/scripts/appdevel.sh
+            printf "\n"
+            read -p $'\e[32mThis one is done. If you are ready for the next, press [ENTER]\e[0m' foo
+            printf "\n"
+            ;;
+
 
             
         

@@ -93,15 +93,15 @@ Download Garmin Desktop app and Adobe XD
     * autonomy
     * Unreal Engine
     * FSDS
+#### [App development](ubuntu/scripts/appdevel.sh) 
+ * Flutter & Dart
+ * Android Studio & Emulator
 #### [Config files](ubuntu/scripts/utils.sh)
  * .bashrc (add exports, link to aliases)
  * .aliases
  * inputrc
 
 ### Todo's
-#### [App Development?](ubuntu/scripts/appdevel.sh) 
- * Flutter
- * Android Studio and Emulator
 #### [Web Development?](ubuntu/scripts/webdevel.sh) 
  * Nodejs
  * ...
