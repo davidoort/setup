@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/platform-tx2_p2771/build-target/verity-software-build/repos/linux_lib/iid/data_types_serialization/proto/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/lib/ccache/clang-9",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-clang-x64",
+            "compileCommands": "/home/dalonso/vs_software/ws_test_pc_build/compile_commands.json"
+        }
+    ],
+    "version": 4
+}

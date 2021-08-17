@@ -1,0 +1,11 @@
+[user]
+	name = Jeff Hykin
+	email = jeff.hykin@gmail.com
+[pull]
+	rebase = false
+[color]
+	ui = true
+[push]
+	default = upstream
+[core]
+	editor = nano

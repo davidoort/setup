@@ -1,0 +1,71 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+    background-color: #1e1e1e;
+}
+
+#remoteVideo {
+    position: absolute;
+    top: 30;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#remoteVideo>canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#title-bar {
+    -webkit-app-region: drag;
+    height: 30px;
+    background-color: #333;
+    width: 100%;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    color: #f8f8f8;
+}
+
+#title {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left:15px;
+}
+
+#title-bar-buttons {
+    -webkit-app-region: no-drag;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+#title-bar-buttons button {
+    color: #f8f8f8;
+    background-color: #333;
+    border: none;
+    padding: 0;
+    margin: 0;
+    height: 30px;
+    width: 45px;
+}
+
+
+#title-bar-buttons button:hover {
+    color: #fff;
+    background-color: #D61425;
+    border: none;
+    cursor: pointer;
+}
+
+#title-bar-buttons button:active,
+#title-bar-buttons button:focus {
+    outline: none;
+    border: none;
+}

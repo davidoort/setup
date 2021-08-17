@@ -1,0 +1,143 @@
+{
+	"name": "hexeditor",
+	"displayName": "Hex Editor",
+	"description": "Allows viewing and editing files in a hex editor",
+	"version": "1.8.2",
+	"aiKey": "AIF-d9b70cd4-b9f9-4d70-929b-a071c400b217",
+	"publisher": "ms-vscode",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/microsoft/vscode-hexeditor"
+	},
+	"bugs": {
+		"url": "https://github.com/microsoft/vscode-hexeditor/issues"
+	},
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.56.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"icon": "icon.png",
+	"activationEvents": [
+		"onView:hexEditor.dataInspectorView",
+		"onCustomEditor:hexEditor.hexedit",
+		"onCommand:hexEditor.openFile"
+	],
+	"main": "./dist/extension.js",
+	"browser": "./dist/web/extension.js",
+	"capabilities": {
+		"untrustedWorkspaces": {
+			"supported": true
+		},
+		"virtualWorkspaces": true
+	},
+	"contributes": {
+		"configuration": [
+			{
+				"title": "Hex Editor",
+				"properties": {
+					"hexeditor.maxFileSize": {
+						"type": "number",
+						"minimum": 0,
+						"default": 10,
+						"description": "The max file size (in MB) that the editor will try to open before warning you."
+					},
+					"hexeditor.dataInspector.autoReveal": {
+						"type": "boolean",
+						"default": true,
+						"description": "Whether to auto reveal the data inspector when the hex editor is opened."
+					},
+					"hexeditor.defaultEndianness": {
+						"type": "string",
+						"default": "little",
+						"enum": [
+							"little",
+							"big"
+						],
+						"description": "The endianness selected when loading the editor."
+					}
+				}
+			}
+		],
+		"customEditors": [
+			{
+				"viewType": "hexEditor.hexedit",
+				"displayName": "Hex Editor",
+				"selector": [
+					{
+						"filenamePattern": "*"
+					}
+				],
+				"priority": "option"
+			}
+		],
+		"commands": [
+			{
+				"command": "hexEditor.openFile",
+				"title": "Hex Editor: Open Active File in Hex Editor"
+			},
+			{
+				"command": "hexEditor.goToOffset",
+				"title": "Hex Editor: Go To Offset"
+			}
+		],
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "hexExplorer",
+					"title": "Hex Editor",
+					"icon": "panel-icon.svg",
+					"when": "hexEditor:openEditor"
+				}
+			]
+		},
+		"views": {
+			"hexExplorer": [
+				{
+					"type": "webview",
+					"id": "hexEditor.dataInspectorView",
+					"name": "Data Inspector",
+					"when": "hexEditor:openEditor"
+				}
+			]
+		},
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "hexEditor.goToOffset",
+					"when": "hexEditor:openEditor"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc && node .esbuild.config.js",
+		"lint": "eslint src --ext ts",
+		"watch": "tsc -noEmit -watch"
+	},
+	"devDependencies": {
+		"@types/node": "^15.6.2",
+		"@types/vscode": "^1.56.0",
+		"@types/webpack-env": "^1.16.0",
+		"@typescript-eslint/eslint-plugin": "^4.26.0",
+		"@typescript-eslint/parser": "^4.26.0",
+		"esbuild": "^0.12.15",
+		"eslint": "^7.27.0",
+		"mocha": "^8.4.0",
+		"ts-loader": "^8.0.14",
+		"typescript": "^4.3.2"
+	},
+	"dependencies": {
+		"@vscode/codicons": "0.0.20",
+		"vscode-extension-telemetry": "^0.2.2"
+	},
+	"__metadata": {
+		"id": "cc7d2112-5178-4472-8e0e-25dced95e7f0",
+		"publisherId": "5f5636e7-69ed-4afe-b5d6-8d231fb3d3ee",
+		"publisherDisplayName": "Microsoft",
+		"installedTimestamp": 1627903753399
+	}
+}
