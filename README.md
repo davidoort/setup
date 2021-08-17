@@ -1,6 +1,7 @@
 # Setup
 An automated way of setting up my workstation on macOS or Ubuntu after a reinstall of the OS
 
+Note: The .vscode folder contains the extensions I like to use. At least in ubuntu, this folder should be put in the home folder.
 ## MacOS
 ### List of applications & files:
 #### [Core](macos/scripts/install.sh)
