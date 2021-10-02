@@ -1,0 +1,9 @@
+{
+    "name": "vs-live-share-remote",
+    "version": "1.0.0",
+    "description": "Screen sharing support for Visual Studio Live Share",
+    "main": "main.js",
+    "author": "Microsoft",
+    "productName": "Visual Studio Live Share"
+  }
+  

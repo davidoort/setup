@@ -1,0 +1,58 @@
+{
+	"name": "VS-code-drupal",
+	"displayName": "Drupal Syntax Highlighting",
+	"description": "Provides syntax highlighting support for Drupal specific file types, such as .module, .inc, .theme etc.",
+	"version": "0.0.12",
+	"engines": {
+		"vscode": "1.x.x"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mastazi/VS-code-drupal"
+	},
+	"license": "SEE LICENSE IN LICENSE.txt",
+	"icon": "images/icon.svg",
+	"categories": [
+		"Other"
+	],
+	"publisher": "marcostazi",
+	"extensionDependencies": [
+		"php"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "php",
+				"aliases": [
+					"PHP",
+					"php"
+				],
+				"extensions": [
+					".engine",
+					".theme",
+					".install",
+					".inc",
+					".make",
+					".module",
+					".profile",
+					".test"
+				]
+			},
+			{
+				"id": "ini",
+				"aliases": [
+					"Ini",
+					"ini"
+				],
+				"extensions": [
+					".info"
+				]
+			}
+		]
+	},
+	"__metadata": {
+		"id": "946d9406-d60f-4a31-b6d8-81604e06dd72",
+		"publisherId": "e4af32d3-5e04-469d-9ac5-ca8cb108422d",
+		"publisherDisplayName": "Marco Stazi"
+	}
+}

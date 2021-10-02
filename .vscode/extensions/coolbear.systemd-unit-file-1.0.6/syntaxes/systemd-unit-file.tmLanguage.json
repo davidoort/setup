@@ -1,0 +1,242 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "systemd unit file",
+  "patterns": [
+    { "include": "#single-line-comments" },
+    { "include": "#known-sections" },
+    { "include": "#unknown-sections" },
+    { "include": "#unit-section-known-options" },
+    { "include": "#install-section-known-options" },
+    { "include": "#service-section-known-options" },
+    { "include": "#socket-section-known-options" },
+    { "include": "#mount-section-known-options" },
+    { "include": "#automount-section-known-options" },
+    { "include": "#swap-section-known-options" },
+    { "include": "#path-section-known-options" },
+    { "include": "#timer-section-known-options" },
+    { "include": "#execution-environment-known-options"},
+    { "include": "#options-prefixed-with-x" },
+    { "include": "#unknown-options" },
+    { "include": "#on-failure-job-modes" },
+    { "include": "#condition-architectures" },
+    { "include": "#condition-virtualizations" },
+    { "include": "#condition-security" },
+    { "include": "#service-types" },
+    { "include": "#service-buspolicy-verbs" },
+    { "include": "#service-restart" },
+    { "include": "#service-success-exit-status-signals" },
+    { "include": "#service-notify-access" },
+    { "include": "#service-start-limit-actions" },
+    { "include": "#socket-bind-ipv6-only" },
+    { "include": "#specifiers" },
+    { "include": "#booleans" },
+    { "include": "#numbers" },
+    { "include": "#suffixed-with-a-time-unit" }
+  ],
+  "repository": {
+    "single-line-comments": {
+      "patterns": [{
+        "name": "comment.line",
+        "match": "#.*$"
+      }, {
+        "name": "comment.line",
+        "match": ";.*$"
+      }]
+    },
+    "known-sections": {
+      "patterns": [{
+        "name": "entity.name.section",
+        "match": "\\[(Unit|Install|Service|Socket|Mount|Automount|Swap|Path|Timer)\\]"
+      }]
+    },
+    "unknown-sections": {
+      "patterns": [{
+        "name": "keyword.other",
+        "match": "\\[.*\\]"
+      }]
+    },
+    "unit-section-known-options": {
+      "patterns": [{
+        "name": "entity.name.tag",
+        "match": "\\b(Description|Documentation|Requires|RequiresOverridable|Requisite|RequisiteOverridable|Wants|BindsTo|PartOf|Conflicts|Before|After|OnFailure|PropagatesReloadTo|ReloadPropagatedFrom|JoinsNamespaceOf|RequiresMountsFor|OnFailureJobMode|IgnoreOnIsolate|IgnoreOnSnapshot|StopWhenUnneeded|RefuseManualStart|RefuseManualStop|AllowIsolate|DefaultDependencies|JobTimeoutSec|JobTimeoutAction|JobTimeoutRebootArgument|ConditionArchitecture|ConditionVirtualization|ConditionHost|ConditionKernelCommandLine|ConditionSecurity|ConditionCapability|ConditionACPower|ConditionNeedsUpdate|ConditionFirstBoot|ConditionPathExistsGlob|ConditionPathExists|ConditionPathIsDirectory|ConditionPathIsSymbolicLink|ConditionPathIsMountPoint|ConditionPathIsReadWrite|ConditionDirectoryNotEmpty|ConditionFileNotEmpty|ConditionFileIsExecutable|AssertArchitecture|AssertVirtualization|AssertHost|AssertKernelCommandLine|AssertSecurity|AssertCapability|AssertACPower|AssertNeedsUpdate|AssertFirstBoot|AssertPathExistsGlob|AssertPathExists|AssertPathIsDirectory|AssertPathIsSymbolicLink|AssertPathIsMountPoint|AssertPathIsReadWrite|AssertDirectoryNotEmpty|AssertFileNotEmpty|AssertFileIsExecutable|SourcePath)\\b"
+      },{
+        "name": "entity.name.tag",
+        "_source": "https://www.freedesktop.org/software/systemd/man/systemd.unit.html",
+        "match": "\\b(Description|Documentation|Wants|Requires|Requisite|BindsTo|PartOf|Conflicts|Before|After|OnFailure|PropagatesReloadTo|ReloadPropagatedFrom|JoinsNamespaceOf|RequiresMountsFor|OnFailureJobMode|IgnoreOnIsolate|StopWhenUnneeded|RefuseManualStart|RefuseManualStop|AllowIsolate|DefaultDependencies|CollectMode|FailureAction|SuccessAction|FailureActionExitStatus|SuccessActionExitStatus|JobTimeoutSec|JobRunningTimeoutSec|JobTimeoutAction|JobTimeoutRebootArgument|StartLimitIntervalSec|StartLimitBurst|StartLimitAction|RebootArgument|SourcePath|ConditionArchitecture|ConditionVirtualization|ConditionHost|ConditionKernelCommandLine|ConditionKernelVersion|ConditionSecurity|ConditionCapability|ConditionACPower|ConditionNeedsUpdate|ConditionFirstBoot|ConditionPathExists|ConditionPathExistsGlob|ConditionPathIsDirectory|ConditionPathIsSymbolicLink|ConditionPathIsMountPoint|ConditionPathIsReadWrite|ConditionDirectoryNotEmpty|ConditionFileNotEmpty|ConditionFileIsExecutable|ConditionUser|ConditionGroup|ConditionControlGroupController|ConditionMemory|ConditionCPUs|AssertArchitecture|AssertVirtualization|AssertHost|AssertKernelCommandLine|AssertKernelVersion|AssertSecurity|AssertCapability|AssertACPower|AssertNeedsUpdate|AssertFirstBoot|AssertPathExists|AssertPathExistsGlob|AssertPathIsDirectory|AssertPathIsSymbolicLink|AssertPathIsMountPoint|AssertPathIsReadWrite|AssertDirectoryNotEmpty|AssertFileNotEmpty|AssertFileIsExecutable|AssertUser|AssertGroup|AssertControlGroupController)\\b"
+      }]
+    },
+    "install-section-known-options": {
+      "patterns": [{
+        "name": "entity.name.tag",
+        "match": "\\b(Alias|WantedBy|RequiredBy|Also|DefaultInstance)\\b"
+      }]
+    },
+    "service-section-known-options": {
+      "patterns": [{
+        "name": "entity.name.tag",
+        "match": "\\b(Type|RemainAfterExit|GuessMainPID|PIDFile|BusName|BusPolicy|ExecStartPre|ExecStartPost|ExecStart|ExecReload|ExecStopPost|ExecStop|RestartSec|TimeoutStartSec|TimeoutStopSec|TimeoutSec|WatchdogSec|Restart|SuccessExitStatus|RestartPreventExitStatus|RestartForceExitStatus|PermissionsStartOnly|RootDirectoryStartOnly|NonBlocking|NotifyAccess|Sockets|StartLimitInterval|StartLimitBurst|StartLimitAction|FailureAction|RebootArgument|FileDescriptorStoreMax|KillMode|KillSignal|SendSIGHUP|SendSIGKILL|FinalKillSignal|WatchdogSignal)\\b"
+      }]
+    },
+    "socket-section-known-options": {
+      "patterns": [{
+        "name": "entity.name.tag",
+        "match": "\\b(ListenStream|ListenDatagram|ListenSequentialPacket|ListenFIFO|ListenSpecial|ListenNetlink|ListenMessageQueue|BindIPv6Only|Backlog|BindToDevice|SocketUser|SocketGroup|SocketMode|DirectoryMode|Accept|MaxConnections|KeepAliveTimeSec|KeepAliveIntervalSec|KeepAliveProbes|KeepAlive|NoDelay|Priority|DeferAcceptSec|ReceiveBuffer|SendBuffer|IPTOS|IPTTL|Mark|ReusePort|SmackLabelIPIn|SmackLabelIPOut|SmackLabel|SELinuxContextFromNet|PipeSize|MessageQueueMaxMessages|MessageQueueMessageSize|FreeBind|Transparent|Broadcast|PassCredentials|PassSecurity|TCPCongestion|ExecStartPre|ExecStartPost|ExecStopPre|ExecStopPost|TimeoutSec|Service|RemoveOnStop|Symlinks|KillMode|KillSignal|SendSIGHUP|SendSIGKILL|FinalKillSignal|WatchdogSignal)\\b"
+      }]
+    },
+    "mount-section-known-options": {
+      "patterns": [{
+        "name": "entity.name.tag",
+        "match": "\\b(What|Where|Type|Options|SloppyOptions|DirectoryMode|TimeoutSec|KillMode|KillSignal|SendSIGHUP|SendSIGKILL|FinalKillSignal|WatchdogSignal)\\b"
+      }]
+    },
+    "automount-section-known-options": {
+      "patterns": [{
+        "name": "entity.name.tag",
+        "match": "\\b(Where|DirectoryMode|TimeoutIdleSec)\\b"
+      }]
+    },
+    "swap-section-known-options": {
+      "patterns": [{
+        "name": "entity.name.tag",
+        "match": "\\b(What|Priority|Options|TimeoutSec|KillMode|KillSignal|SendSIGHUP|SendSIGKILL|FinalKillSignal|WatchdogSignal)\\b"
+      }]
+    },
+    "path-section-known-options": {
+      "patterns": [{
+        "name": "entity.name.tag",
+        "match": "\\b(PathExists|PathExistsGlob|PathChanged|PathModified|DirectoryNotEmpty|Unit|MakeDirectory|DirectoryMode)\\b"
+      }]
+    },
+    "timer-section-known-options": {
+      "patterns": [{
+        "name": "entity.name.tag",
+        "match": "\\b(OnActiveSec|OnBootSec|OnStartupSec|OnUnitActiveSec|OnUnitInactiveSec|OnCalendar|AccuracySec|RandomizedDelaySec|Unit|Persistent|WakeSystem)\\b"
+      }]
+    },
+    "execution-environment-known-options": {
+      "patterns": [{
+        "name": "entity.name.tag",
+        "_source": "https://www.freedesktop.org/software/systemd/man/systemd.exec.html",
+        "match": "\\b(WorkingDirectory|RootDirectory|RootImage|MountAPIVFS|BindPaths|BindReadOnlyPaths|User|Group|DynamicUser|SupplementaryGroups|PAMName|CapabilityBoundingSet|AmbientCapabilities|NoNewPrivileges|SecureBits|SELinuxContext|AppArmorProfile|SmackProcessLabel|LimitCPU|LimitFSIZE|LimitDATA|LimitSTACK|LimitCORE|LimitRSS|LimitNOFILE|LimitAS|LimitNPROC|LimitMEMLOCK|LimitLOCKS|LimitSIGPENDING|LimitMSGQUEUE|LimitNICE|LimitRTPRIO|LimitRTTIME|UMask|KeyringMode|OOMScoreAdjust|TimerSlackNSec|Personality|IgnoreSIGPIPE|Nice|CPUSchedulingPolicy|CPUSchedulingPriority|CPUSchedulingResetOnFork|CPUAffinity|IOSchedulingClass|IOSchedulingPriority|ProtectSystem|ProtectHome|RuntimeDirectory|StateDirectory|CacheDirectory|LogsDirectory|ConfigurationDirectory|RuntimeDirectoryMode|StateDirectoryMode|CacheDirectoryMode|LogsDirectoryMode|ConfigurationDirectoryMode|RuntimeDrectoryPreserve|ReadWritePaths|ReadOnlyPaths|InaccessiblePaths|PrivateTmp|PrivateDevices|PrivateNetwork|PrivateUsers|ProtectKernelTunables|ProtectKernelModules|ProtectControlGroups|RestrictAddressFamilies|RestrictNamespaces|LockPersonality|MemoryDenyWriteExecute|RestrictRealtime|RemoveIPC|MountFlags|SystemCallFilter|SystemCallErrorNumber|SystemCallArchitectures|Environment|EnvironmentFile|PassEnvironment|UnsetEnvironment|StandardInput|StandardOutput|StandardError|StandardInputText|StandardInputData|LogLevelMax|LogExtraFields|SyslogIdentifier|SyslogFacility|SyslogLevel|SyslogLevelPrefix|TTYPath|TTYReset|TTYHangup|TTYVTDisallocate|UtmpIdentifier|UtmpMode|)\\b"
+      },{
+        "name": "entity.name.tag",
+        "_source": "`man 5 systemd.exec` on CentOS 7",
+        "match": "\\b(WorkingDirectory|RootDirectory|User|Group|SupplementaryGroups|Nice|OOMScoreAdjust|IOSchedulingClass|IOSchedulingPriority|CPUSchedulingPolicy|CPUSchedulingPriority|CPUSchedulingResetOnFork|CPUAffinity| UMask|Environment|EnvironmentFile|PassEnvironment|StandardInput|StandardOutput|StandardError|TTYPath|TTYReset|TTYVHangup|TTYVDisallocate|SyslogIdentifier|SyslogFacility|SyslogLevel|SyslogLevelPrefix|TimerSlackNSec|LimitCPU|LimitFSIZE|LimitDATA|LimitSTACK|LimitCORE|LimitRSS|LimitNOFILE|LimitAS|LimitNPROC|LimitMEMLOCK|LimitLOCKS|LimitSIGPENDING|LimitMSGQUEUE|LimitNICE|LimitRTPRIO|LimitRTTIME| PAMName|CapabilityBoundingSet|AmbientCapabilities|SecureBits|Capabilities|ReadWriteDirectories|ReadOnlyDirectories|InaccessibleDirectories|PrivateTmp|PrivateDevices|PrivateNetwork|ProtectSystem|ProtectHome|MountFlags|UtmpIdentifier|SELinuxContext|AppArmorProfile|SmackProcessLabel|IgnoreSIGPIPE|NoNewPrivileges|SystemCallFilter|SystemCallErrorNumber|SystemCallArchitectures|RestrictAddressFamilies|Personality|RuntimeDirectory|RuntimeDirectoryMode)\\b"
+      }]
+    },
+    "resource-control-known-options": {
+      "patterns": [{
+        "name": "entity.name.tag",
+        "_source": "https://www.freedesktop.org/software/systemd/man/systemd.resource-control.html",
+        "match": "\\b(CPUAccounting|CPUWeight|StartupCPUWeight|CPUQuota|CPUQuotaPeriodSec|MemoryAccounting|MemoryMin|MemoryLow|MemoryHigh|MemoryMax|MemorySwapMax|TasksAccounting|TasksMax|IOAccounting|IOWeight|StartupIOWeight|IODeviceWeight|IOReadBandwidthMax|IOWriteBandwidthMax|IOReadIOPSMax|IOWriteIOPSMax|IODeviceLatencyTargetSec|IPAccounting|IPAddressAllow|IPAddressDeny|IPIngressFilterPath|IPEgressFilterPath|DeviceAllow|DevicePolicy|Slice|Delegate|DisableControllers)\\b"
+      },{
+        "name": "entity.name.tag",
+        "_source": "`man 5 systemd.resource-control` on CentOS 7",
+        "match": "\\b(CPUAccounting|CPUShares|StartupCPUShares|CPUQuota|MemoryAccounting|MemoryLimit|TasksAccounting|TasksMax|BlockIOAccounting|BlockIOWeight|StartupBlockIOWeight|BlockIODeviceWeight|BlockIOReadBandwidth|BlockIOWriteBandwidth|DeviceAllow|DevicePolicy|Slice|Delegate)\\b"
+      }]
+    },
+    "options-prefixed-with-x": {
+      "patterns": [{
+        "name": "entity.name.tag",
+        "match": "\\bX-.*\\b"
+      }]
+    },
+    "unknown-options": {
+      "patterns": [{
+        "name": "keyword.other",
+        "match": "^[^= ]+"
+      }]
+    },
+    "on-failure-job-modes": {
+      "patterns": [{
+        "name": "constant.language",
+        "match": "\\b(fail|replace-irreversibly|replace|isolate|flush|ignore-dependencies|ignore-requirements)\\b"
+      }]
+    },
+    "condition-architectures": {
+      "patterns": [{
+        "name": "constant.language",
+        "match": "\\b(x86-64|x86|ppc-le|ppc|ppc64-le|ppc64|ia64|parisc|parisc64|s390|s390x|sparc|sparc64|mips-le|mips|mips64-le|mips64|alpha|arm-be|arm64-be|arm64|arm|sh|sh64|m86k|tilegx|cris|native)\\b"
+      }]
+    },
+    "condition-virtualizations": {
+      "patterns": [{
+        "name": "constant.language",
+        "match": "\\b(qemu|kvm|zvm|vmware|microsoft|oracle|xen|bochs|uml|openvz|lxc-libvirt|lxc|systemd-nspawn|docker)\\b"
+      }]
+    },
+    "condition-security": {
+      "patterns": [{
+        "name": "constant.language",
+        "match": "\\b(selinux|apparmor|ima|smack|audit)\\b"
+      }]
+    },
+    "service-types": {
+      "patterns": [{
+        "name": "constant.language",
+        "match": "\\b(simple|forking|oneshot|dbus|notify|idle)\\b"
+      }]
+    },
+    "service-buspolicy-verbs": {
+      "patterns": [{
+        "name": "constant.language",
+        "match": "\\b(see|talk|own)\\b"
+      }]
+    },
+    "service-restart": {
+      "patterns": [{
+        "name": "constant.language",
+        "match": "\\b(no|always|on-success|on-failure|on-abnormal|on-abort|on-watchdog)\\b"
+      }]
+    },
+    "service-success-exit-status-signals": {
+      "patterns": [{
+        "name": "constant.language",
+        "match": "\\b(SIGHUP|SIGINT|SIGTERM|SIGPIPE)\\b"
+      }]
+    },
+    "service-notify-access": {
+      "patterns": [{
+        "name": "constant.language",
+        "match": "\\b(none|main|all)\\b"
+      }]
+    },
+    "service-start-limit-actions": {
+      "patterns": [{
+        "name": "constant.language",
+        "match": "\\b(none|reboot-force|reboot-immediate|reboot|poweroff-force|poweroff-immediate|poweroff)\\b"
+      }]
+    },
+    "socket-bind-ipv6-only": {
+      "patterns": [{
+        "name": "constant.language",
+        "match": "\\b(default|both|ipv6-only)\\b"
+      }]
+    },
+    "specifiers": {
+      "patterns": [{
+        "name": "entity.name.tag",
+        "match": "(%(n|N|p|P|i|I|f|c|r|R|t|u|U|h|s|m|b|H|v|)\\b|%%)"
+      }]
+    },
+    "booleans": {
+      "patterns": [{
+        "name": "constant.language",
+        "match": "\\b(true|false|on|off|yes|no)\\b"
+      }]
+    },
+    "numbers": {
+      "patterns": [{
+        "name": "constant.numeric",
+        "match": "\\b\\d+\\b"
+      }]
+    },
+    "suffixed-with-a-time-unit": {
+      "patterns": [{
+        "name": "constant.numeric",
+        "match": "\\b\\d+(s|min|h|d|w|ms|us)\\b"
+      }]
+    }
+  },
+  "scopeName": "source.systemdUnitFile"
+}

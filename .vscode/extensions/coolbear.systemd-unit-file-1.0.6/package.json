@@ -1,0 +1,58 @@
+{
+	"name": "systemd-unit-file",
+	"repository": {
+		"url": "https://github.com/bearmini/vscode-systemd-unit-file"
+	},
+	"displayName": "systemd-unit-file",
+	"description": "Language support for systemd unit files",
+	"version": "1.0.6",
+	"publisher": "coolbear",
+	"engines": {
+		"vscode": "^1.20.0"
+	},
+	"license": "MIT",
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "systemd-unit-file",
+				"aliases": [
+					"systemd unit file",
+					"systemd-unit-file"
+				],
+				"extensions": [
+					".link",
+					".netdev",
+					".network",
+					".service",
+					".socket",
+					".device",
+					".mount",
+					".automount",
+					".swap",
+					".target",
+					".path",
+					".timer",
+					".snapshot",
+					".slice",
+					".scope"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "systemd-unit-file",
+				"scopeName": "source.systemdUnitFile",
+				"path": "./syntaxes/systemd-unit-file.tmLanguage.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "fe20f03a-2abf-470a-ab23-d671ec38ce42",
+		"publisherId": "73aa15f5-fc31-45ec-ab42-e339b1dee6b6",
+		"publisherDisplayName": "coolbear"
+	}
+}
